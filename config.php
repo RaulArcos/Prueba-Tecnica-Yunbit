@@ -9,7 +9,7 @@ define('DATABASE', 'pruebas_practicas');
  
 //Realizamos la conexión, en caso de error se devuelve una excepción.
 try {
-    $connection = new PDO("mysql:host=".HOST.";dbname=".DATABASE, USER, PASSWORD);
+    $pdo = new PDO("mysql:host=".HOST.";dbname=".DATABASE, USER, PASSWORD);
 } catch (PDOException $e) {
     exit("Error: " . $e->getMessage());
 }
