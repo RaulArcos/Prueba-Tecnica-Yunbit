@@ -6,7 +6,8 @@ include('assets/header/prueba-yunbit-header.php');
 $client = $pdo->prepare("SELECT NAME,ADDRESS,TELF,TYPE FROM test_clients");
 $client->execute();
 
-if (isset($_POST['registrar'])) {
+
+if (isset($_POST['register'])) {
 
     $name = $_POST['name'];
     $address = $_POST['address'];
@@ -57,20 +58,20 @@ if (isset($_POST['registrar'])) {
                 <div class="card card-registration border-warning" style="border-radius: 15px;">
                     <div class="card-body p-4 p-md-5">
                         <h3 class="mb-4">Registro Clientes</h3>
-                        <form method ="post">
+                        <form method ="post" id ="register" action="">
                             <div class="mb-4">
-                                <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Nombre completo" required/>
+                                <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Nombre completo"/>
                             </div>
                             <div class="mb-4">
-                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Dirección" required/>
+                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Dirección"/>
                             </div>
                             <div class="mb-4">
-                                <input type="text" name="description" class="form-control form-control-lg" id="description" placeholder="Descripción" required/>
+                                <input type="text" name="description" class="form-control form-control-lg" id="description" placeholder="Descripción"/>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div>
-                                        <input type="tel" name="telf" id="telf" class="form-control form-control-lg" placeholder="Teléfono" required/>
+                                        <input type="tel" name="telf" id="telf" class="form-control form-control-lg" placeholder="Teléfono"/>
                                     </div>  
                                 </div>
                                 <div class="col-md-6">
@@ -88,7 +89,7 @@ if (isset($_POST['registrar'])) {
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <input class="btn btn-warning btn-lg" name="registrar" type="submit" value="Registrar" required/>
+                                <input class="btn btn-warning btn-lg" name="register" type="submit" value="Registrar"/>
                             </div>
                         </form>
                     </div>
@@ -96,4 +97,5 @@ if (isset($_POST['registrar'])) {
             </div>
     </div>
 </div>
+<script src="assets/js/register-validation.js"></script>
 </body>
