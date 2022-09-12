@@ -3,7 +3,7 @@
 include('assets/header/prueba-yunbit-header.php');
 
 //Seleccionamos nombre, dirección y teléfono de todos los clientes en la db.
-$client = $pdo->prepare("SELECT NAME,ADDRESS,TELF,TYPE FROM test_clients");
+$client = $pdo->prepare("SELECT ID,NAME,ADDRESS,TELF,TYPE FROM test_clients");
 $client->execute();
 
 
@@ -27,6 +27,12 @@ if (isset($_POST['register'])) {
     $client->execute();
 }
 
+if (isset($_POST['details'])) {
+    
+    $_SESSION['ID_DETAILS'] = $_POST['details'];
+    header("Location: details.php");
+}
+
 ?>
 <body>
 
@@ -47,6 +53,9 @@ if (isset($_POST['register'])) {
                 <p class="text-sm"><?php echo $c['ADDRESS'] ?></p>
                 <p class="text-sm"><?php echo $c['TELF'] ?></p>
             </div>
+            <form method="post">
+                <button class="btn btn-dark" name="details" value="<?php echo $c['ID']?>" type="submit">Detalles</button>
+            </form>
             </div>
         </div>
         <?php } ?>
