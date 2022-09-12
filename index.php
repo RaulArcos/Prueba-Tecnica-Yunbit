@@ -29,8 +29,8 @@ if (isset($_POST['register'])) {
 
 if (isset($_POST['details'])) {
     
-    $_SESSION['ID_DETAILS'] = $_POST['details'];
-    header("Location: details.php");
+    $id = $_POST['details'];
+    header("Location: details.php/?id=$id");
 }
 
 ?>

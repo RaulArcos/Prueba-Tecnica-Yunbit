@@ -1,5 +1,4 @@
 <?php 
-session_start();
 /*
 Utilizo un header para que, en el caso de contar con varias páginas diferentes
 no tenga que reescribir código relacionado con la configuración de la db y/o el css.
