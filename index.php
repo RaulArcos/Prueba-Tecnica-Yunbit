@@ -73,12 +73,12 @@ if (isset($_POST['registrar'])) {
                                     <h6 class="mb-2 pb-1">Tipo: </h6>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="type" id="type"
-                                        value="n" checked/>
+                                        value="N" checked/>
                                         <label class="form-check-label" for="type">Normal</label>
                                     </div>  
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="type" id="type"
-                                        value="p" />
+                                        value="P" />
                                         <label class="form-check-label" for="type">Premium</label>
                                     </div>
                                 </div>
