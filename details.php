@@ -1,7 +1,7 @@
 <?php 
 //Incluimos el header (Configuración de db y carga de css).
 include('assets/header/prueba-yunbit-header.php');
-$id = $_SESSION['ID_DETAILS'];
+$id = $_GET['id'];
 
 $client = $pdo->prepare("SELECT * FROM test_clients where ID = $id");
 $client->execute();
