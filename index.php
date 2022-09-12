@@ -3,7 +3,7 @@
 include('assets/header/prueba-yunbit-header.php');
 
 //Seleccionamos nombre, dirección y teléfono de todos los clientes en la db.
-$client = $pdo->prepare("SELECT NAME,ADDRESS,TELF FROM test_clients");
+$client = $pdo->prepare("SELECT NAME,ADDRESS,TELF,TYPE FROM test_clients");
 $client->execute();
 
 if (isset($_POST['registrar'])) {
@@ -34,8 +34,12 @@ if (isset($_POST['registrar'])) {
     <!-- Columna Izquierda de Clientes -->
     <div class="col-lg-6">
         <!-- Cliente individual -->
-        <?php foreach ($client as $c){ ?>
-        <div class="card  pos-relative py-3 px-3 mb-3 border-warning">
+        <?php foreach ($client as $c){ 
+        if($c['TYPE'] == "P"){ ?>
+        <div class="card pos-relative py-3 px-3 mb-3 premium-highlight">
+        <?php } else {?>
+        <div class="card pos-relative py-3 px-3 mb-3 border-warning">
+        <?php }?>
             <div class="row align-items-center">
             <div class="col-md-8 mb-3 mb-sm-0">
                 <h5> <?php echo $c['NAME'] ?></h5>
