@@ -54,7 +54,7 @@ if (isset($_POST['registrar'])) {
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4">Registro Clientes</h3>
                             <form method ="post">
-                                <div class="mb-4"><input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Nombre completo" required/></div>
+                                <div class="mb-4"><input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Nombre" required/></div>
                                 <div class="mb-4"><input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Dirección" required/></div>
                                 <div class="mb-4"><input type="text" name="description" class="form-control form-control-lg" id="description" placeholder="Descripción" required/></div>
                                 <div class="row">
