@@ -5,7 +5,7 @@ $client = $pdo->prepare("SELECT NAME,ADDRESS,TELF,TYPE FROM test_clients");
 $client->execute();
 
 
-if (isset($_POST['register'])) {
+if (isset($_POST['registerbtn'])) {
 
     $name = $_POST['name'];
     $address = $_POST['address'];
@@ -54,7 +54,7 @@ if (isset($_POST['register'])) {
                     <div class="card card-registration border-warning" style="border-radius: 15px;">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4">Registro Clientes</h3>
-                            <form method ="post" id ="register">
+                            <form method ="POST" id="register"  onsubmit="return registerValidation();">
                                 <div class="mb-4"><input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Nombre"/></div>
                                 <div class="mb-4"><input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Dirección"/></div>
                                 <div class="mb-4"><input type="text" name="description" class="form-control form-control-lg" id="description" placeholder="Descripción"/></div>
@@ -74,7 +74,7 @@ if (isset($_POST['register'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-4"><input class="btn btn-warning btn-lg" name="register" type="submit" value="Registrar"/></div> 
+                                <div class="mt-4"><input class="btn btn-warning btn-lg" name="registerbtn" type="submit" value="Registrar"/></div> 
                             </form>
                         </div>
                     </div>
