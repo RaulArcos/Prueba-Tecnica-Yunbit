@@ -22,14 +22,12 @@ $client = $client->fetch(PDO::FETCH_ASSOC);
                 <div class="mb-2">
                     <p class="text-sm">Dirección: <?php echo $client['ADDRESS'] ?></p>
                     <p class="text-sm">Teléfono: <?php echo $client['TELF'] ?></p>
-                
                     <?php if($c['TYPE'] == "P"){?>
                     <p class="text-sm">Usuario con cuenta de tipo normal.</p>
                     <?php } else { ?>
                     <p class="text-sm">Usuario con cuenta de tipo premium.</p>   
                     <?php } ?>
-
-                    <a href="../index.php" class="btn btn-warning">Volver</a>
+                    <a href="./index.php" class="btn btn-warning">Volver</a>
                 </div>
             </div>
         </div>
