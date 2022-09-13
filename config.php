@@ -1,6 +1,5 @@
 <?php
 //config.php para que, en caso de tener que utilizar la bd en otros archivos no repetir código.
-
 //Definimos los datos de nuestra base de datos.
 define('USER', 'pruebajr');
 define('PASSWORD', 'pruebajr');
