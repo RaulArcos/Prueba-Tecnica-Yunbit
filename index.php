@@ -26,8 +26,8 @@ if (isset($_POST['register'])) {
 
 if (isset($_POST['details'])) {
     
-    $id = $_POST['details'];
-    header("Location: details.php/?id=$id");
+    $name = $_POST['details'];
+    header("Location: details/$name");
 }
 
 ?>
@@ -50,7 +50,7 @@ if (isset($_POST['details'])) {
                 <p class="text-sm"><?php echo $c['TELF'] ?></p>
             </div>
             <form method="post">
-                <button class="btn btn-dark" name="details" value="<?php echo $c['ID']?>" type="submit">Detalles</button>
+                <button class="btn btn-dark" name="details" value="<?php echo $c['NAME']?>" type="submit">Detalles</button>
             </form>
             </div>
         </div>

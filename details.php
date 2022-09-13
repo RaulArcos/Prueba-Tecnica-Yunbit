@@ -2,16 +2,15 @@
 //Incluimos el header (Configuración de db y carga de css).
 include('assets/header/prueba-yunbit-header.php');
 //priorizamos el quie pasamos por el método GET antes que session.
-$id = $_GET['id'];
+$name = $_GET['name'];
 
-$client = $pdo->prepare("SELECT * FROM test_clients where ID = $id");
+$client = $pdo->prepare("SELECT * FROM test_clients where NAME = '$name'");
 $client->execute();
 $client = $client->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
 <body>
-
 <div class="container">
     <div class="row">
     <div class="col-lg-12">
@@ -23,7 +22,7 @@ $client = $client->fetch(PDO::FETCH_ASSOC);
                 <div class="mb-2">
                     <p class="text-sm">Dirección: <?php echo $client['ADDRESS'] ?></p>
                     <p class="text-sm">Teléfono: <?php echo $client['TELF'] ?></p>
-                    <?php if($c['TYPE'] == "P"){?>
+                    <?php if($client['TYPE'] == "P"){?>
                     <p class="text-sm">Usuario con cuenta de tipo normal.</p>
                     <?php } else { ?>
                     <p class="text-sm">Usuario con cuenta de tipo premium.</p>   
@@ -34,3 +33,4 @@ $client = $client->fetch(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
+</body>

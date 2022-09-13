@@ -1,0 +1,6 @@
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #Friendly Url para details.
+    RewriteRule ^details/(.*)$ ./details.php/?name=$1 [NC,L]
+</IfModule>
