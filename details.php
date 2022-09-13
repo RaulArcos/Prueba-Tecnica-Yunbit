@@ -1,7 +1,6 @@
 <?php 
-//Incluimos el header (Configuración de db y carga de css).
 include('assets/header/prueba-yunbit-header.php');
-//priorizamos el quie pasamos por el método GET antes que session.
+
 $name = $_GET['name'];
 
 $client = $pdo->prepare("SELECT * FROM test_clients where NAME = '$name'");
@@ -9,7 +8,6 @@ $client->execute();
 $client = $client->fetch(PDO::FETCH_ASSOC);
 
 ?>
-
 <body>
 <div class="container">
     <div class="row">
