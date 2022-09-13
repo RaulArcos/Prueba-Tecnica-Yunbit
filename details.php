@@ -1,5 +1,4 @@
 <?php 
-//Incluimos el header (Configuración de db y carga de css).
 include('assets/header/prueba-yunbit-header.php');
 $id = $_GET['id'];
 

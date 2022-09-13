@@ -3,7 +3,6 @@ include('assets/header/prueba-yunbit-header.php');
 $client = $pdo->prepare("SELECT ID,NAME,ADDRESS,TELF,TYPE FROM test_clients");
 $client->execute();
 
-
 if (isset($_POST['register'])) {
 
     $name = $_POST['name'];
@@ -25,7 +24,6 @@ if (isset($_POST['register'])) {
 }
 
 if (isset($_POST['details'])) {
-    
     $id= $_POST['details'];
     header("Location: details.php?id=$id");
 }
