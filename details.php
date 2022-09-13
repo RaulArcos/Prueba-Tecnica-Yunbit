@@ -29,7 +29,7 @@ $client = $client->fetch(PDO::FETCH_ASSOC);
                     <p class="text-sm">Usuario con cuenta de tipo premium.</p>   
                     <?php } ?>
 
-                    <a href="index.php" class="btn btn-warning">Volver</a>
+                    <a href="../index.php" class="btn btn-warning">Volver</a>
                 </div>
             </div>
         </div>
