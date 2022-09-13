@@ -1,15 +1,8 @@
 <?php 
 
-/*
-Utilizo un header para que, en el caso de contar con varias páginas diferentes
-no tenga que reescribir código relacionado con la configuración de la db y/o el css.
-*/
-
-//Incluimos la configuración de la db.
 include('config.php');
 ?>
 
-<!-- Configuración sencilla de CSS para html -->
 <!DOCTYPE html>
 <head> 
     <meta charset="utf-8">
