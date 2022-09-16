@@ -1,5 +1,6 @@
 <?php 
 include('assets/header/prueba-yunbit-header.php');
+
 $name = $_GET['name'];
 
 $client = $pdo->prepare("SELECT * FROM test_clients where NAME = '$name'");
@@ -7,7 +8,6 @@ $client->execute();
 $client = $client->fetch(PDO::FETCH_ASSOC);
 
 ?>
-
 <body>
 <div class="container">
     <div class="row">
